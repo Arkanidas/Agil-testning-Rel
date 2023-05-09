@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import Addition from '../calculations/Addition'
+import Division from '../calculations/Division'
 
 const NumberInput = () => {
   const [num1, setNum1] = useState("")
@@ -6,33 +8,24 @@ const NumberInput = () => {
   const [method, setMethod] = useState("+")
   const [result, setResult] = useState ("")
 
-  const calculateResult = (e) => {
+  const calculate = (e) => {
     e.preventDefault();
+    {method === '+' ? (
+      <Addition num1={num1} num2={num2} result={result} setResult={setResult}/>
+    ) : method === '/' ? (
+      <Division num1={num1} num2={num2}  result={result} setResult={setResult}/>
+    ) : (
+      <h2>Invalid operation</h2>
+    )}
 
-    const number1 = parseFloat(num1);
-    const number2 = parseFloat(num2);
-
-    let calculatedResult = "";
-
-    switch (method) {
-      case '+':
-        calculatedResult = number1 + number2;
-        break;
-      case '/':
-        calculatedResult = number1 / number2;
-        break;
-      default:
-        calculatedResult = 'Invalid operation';
-    }
-    setResult(calculatedResult);
   }
   return (
-    <form onSubmit={calculateResult}>
+    <form>
 
         <input type="number" value={num1}  onChange={(e) => setNum1(e.target.value)}>
         </input>
         
-        <select value="method" onChange={(e) => setMethod(e.target.value)}>
+        <select value={method} onChange={(e) => setMethod(e.target.value)}>
           <option value="+">+</option>
           <option value="/">/</option>
         </select>
@@ -40,9 +33,9 @@ const NumberInput = () => {
         <input type="number" value={num2}  onChange={(e) => setNum2(e.target.value)}>
         </input>
 
-        <button>Calculate</button>
+        <button onClick={calculate}>Calculate</button>
 
-        <h2 id='result'>Result: {result}</h2>
+        <h2>{result}</h2>
     </form>
   )
 }
