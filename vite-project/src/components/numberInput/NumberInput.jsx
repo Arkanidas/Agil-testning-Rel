@@ -18,12 +18,6 @@ const NumberInput = () => {
       case '+':
         calculatedResult = number1 + number2;
         break;
-      case '-':
-        calculatedResult = number1 - number2;
-        break;
-      case '*':
-        calculatedResult = number1 * number2;
-        break;
       case '/':
         calculatedResult = number1 / number2;
         break;
@@ -40,8 +34,6 @@ const NumberInput = () => {
         
         <select value="method" onChange={(e) => setMethod(e.target.value)}>
           <option value="+">+</option>
-          <option value="-">-</option>
-          <option value="*">*</option>
           <option value="/">/</option>
         </select>
 
