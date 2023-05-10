@@ -17,8 +17,8 @@ const NumberInput = () => {
     ) : (
       <h2>Invalid operation</h2>
     )}
-
   }
+
   return (
     <form>
 
@@ -35,7 +35,7 @@ const NumberInput = () => {
 
         <button onClick={calculate}>Calculate</button>
 
-        <h2>{result}</h2>
+        <h2>Result:{result}</h2>
     </form>
   )
 }
