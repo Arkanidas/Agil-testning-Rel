@@ -1,7 +1,5 @@
 import {render, screen} from '@testing-library/react';
-import Add from '../Describes/add'
-import {addNumbers} from '../component/Numinput'
-import Numinput from '../component/Numinput'
+import Numinput, {addNumbers} from '../component/Numinput'
 
 describe("addition", () =>{
 
