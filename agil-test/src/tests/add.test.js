@@ -4,21 +4,17 @@ import Numinput, {addNumbers} from '../component/Numinput'
 describe("addition", () =>{
 
 
-test('That the numbers inputted in selector returns the sum of both', () =>{
+    test('That the numbers inputted in selector returns the sum of both', () =>{
 
-//when
-render(<Numinput/>);
+    const num1 = 3;
+    const num2 = 4;
 
+    const expectedSum = 7
 
-const num1 = 3;
-const num2 = 4;
-
-const expectedSum = 7
-
-const sum = addNumbers(num1,num2);
+    const sum = addNumbers(num1,num2);
 
 
-expect(sum).toBe(expectedSum);
+    expect(sum).toBe(expectedSum);
 
 })
 

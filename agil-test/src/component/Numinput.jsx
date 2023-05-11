@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import divideNumbers from '../calculations/divideNumbers';
+import addNumbers from '../calculations/addNumbers';
 
 const Numinput = () => {
   const [num1, setNum1] = useState('');
@@ -25,13 +27,6 @@ const Numinput = () => {
     setResult(calculatedResult);
   };
 
-  const addNumbers = (a, b) => {
-    return a + b;
-  };
-
-  const divideNumbers = (a, b) => {
-    return a / b;
-  };
 
   return (
     <form>
