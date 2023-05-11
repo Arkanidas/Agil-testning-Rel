@@ -1,5 +1,5 @@
 import {render, screen} from '@testing-library/react';
-import Numinput from '../component/Numinput'
+import divideNumbers from '../calculations/divideNumbers';
 
 describe("division", () =>{
 

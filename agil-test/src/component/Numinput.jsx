@@ -37,7 +37,7 @@ const Numinput = () => {
       </select>
       <input type="number" value={num2} onChange={(e) => setNum2(e.target.value)} />
       <button onClick={calculate}>Calculate</button>
-      <h2>Result: {result}</h2>
+      <h2>Result: {Math.round(result)}</h2>
     </form>
   );
 };
