@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import divideNumbers from '../calculations/divideNumbers';
 import addNumbers from '../calculations/addNumbers';
 
-const Numinput = () => {
+const numInput = () => {
   const [num1, setNum1] = useState('');
   const [num2, setNum2] = useState('');
   const [method, setMethod] = useState('+');
@@ -42,4 +42,4 @@ const Numinput = () => {
   );
 };
 
-export default Numinput;
+export default numInput;
