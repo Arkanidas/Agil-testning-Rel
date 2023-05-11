@@ -18,12 +18,11 @@ describe("division", () =>{
 
     const num1 = 5;
     const num2 = 2;
-    const expectedKvot = 2;
+    const expectedKvot = 3;
 
     const kvot = divideNumbers(num1, num2);
-    const roundedKvot = Math.round(kvot);
 
-    expect(roundedKvot).toBe(expectedKvot);
+    expect(kvot).toBe(expectedKvot);
 
     })
 
